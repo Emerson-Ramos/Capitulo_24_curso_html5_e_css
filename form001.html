@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <Style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(229, 205, 252);
+    }
+
+    </Style>
+
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+
+        <!-- <form action="cadastro.php" autocomplete="off">
+
+            - action = envia os dados para o arquivo cadastro.php
+            - autocomplete="off" desabilita o preenchedor automático de campos
+            - method = GET -> os dados sao visíveis na URL (dados nao sensívies)
+            -         POST -> os dados nao sao visíveis na URL (dados sensíveis RG/CPF...)
+            -         GET/POST - Nunca utlizar para informações como senhas/cartões crédito/etc... neste caso utilizar https -->
+            
+            <form action="cadastro.php" method="post" autocomplete="off">
+
+            <p><label for="inome">Nome:</label>
+
+                <input type="text" name="nome" id="nome">
+            </p>
+
+                
+            <p><label for="isobrenome">Sobrenome:</label>
+                 <input type="text" name="Sobrenome" id="Sobrenome"></p>
+
+            
+            <p><label for="iendereco">Endereço</label>
+                <input type="text" name="iendereco" id="iendereco">
+
+                <p><input type="submit" value="Enviar"></p>
+            </p>
+            
+            </form>
+</body>
+
+</html>
