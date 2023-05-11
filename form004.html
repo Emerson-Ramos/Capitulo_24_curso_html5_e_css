@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(172, 255, 47, 0.158);
+        }
+        h1{
+            background-color: rgb(236, 233, 233);
+            width: 500px;
+            height: 40px;
+            text-align: center;
+            border-left: 1px solid rgba(128, 128, 128, 0.76);
+            border-top: 1px solid rgba(128, 128, 128, 0.76);
+            box-shadow: 2px 2px 2px black;
+        }
+        
+        fieldset{
+            background-color: rgb(159, 159, 255);
+            border-radius: 10px ;
+            border: 1px solid rgb(143, 140, 140);
+            box-shadow: 0px 1px 5px 0px  rgba(0, 0, 0, 0.514);
+        /* Configuração do box-shadow:display:
+        1º - espalhamento lado esquerdo
+        2º - espalhamento em baixo
+        3º - espalhamento em profundidade
+        4º - espalhamento no contorno */
+
+        }
+        legend{
+            background-color: rgb(159,159, 255);
+            border: 1px solid white;
+        }
+       
+        label{
+            background-color: rgba(67, 67, 252, 0.726);
+            color: white;
+        }
+        p > input{
+            background-color: rgb(194, 191, 191);
+            color: black ;
+        }
+        input#botton{
+            border: none;
+            width: 55px;
+            height: 22px;
+            text-align: center;
+            background-color: green;
+            color: white;
+
+        }
+        input#botton:hover{
+            background-color: rgb(1, 90, 1);
+            box-shadow: 1px 1px 1px rgb(1, 61, 1);
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend> <!-- Titulo da combox criada pela tag <fieldset>-->
+        
+        <p>
+            <label for="inome">Nome</label>
+            <input type="text" name="nome" id="inome" required maxlength="20" autocomplete="on" placeholder="Nome completo">
+        </p>
+        <p>
+            <label for="iemail">E-mail</label>
+            <input type="email" name="email" id="iemail" autocomplete="email" required placeholder="exemplo@exemplo.com.br" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        </p>
+        <p>
+            <label for="itel">Telefone</label>
+            <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" required placeholder="(**)*****-****">
+        </p>
+       
+    </fieldset> <!-- Cria uma combox agregada a tag <fieldset>-->
+    
+        <p>
+            <input id="botton" type="submit" value="Enviar">
+            <input id="botton" type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+<!-- Modelos de máscara para HTML
+
+Apenas letras:
+<input type="text" required="required" name="text" pattern="[a-zA-Z\s]+$" />
+
+Apenas números:
+<input type="text" required="required" name="numbers" pattern="[0-9]+$" />
+
+Data:
+<input type="date" required="required" maxlength="10" name="date" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2012-01-01" max="2014-02-18" />
+
+Hora:
+<input type="time" required="required" maxlength="8" name="hour" pattern="[0-9]{2}:[0-9]{2} [0-9]{2}$" />
+
+Telefone:
+<input type="tel" required="required" maxlength="15" name="phone" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" />
+
+E-mail:
+<input type="email" required="required" class="input-text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+ 
+
+-->
+</html>
